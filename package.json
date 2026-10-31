@@ -1,0 +1,32 @@
+{
+  "name": "moneymodel",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Personal finance coach with a living money model \u2014 local-first, encrypted, Grok-powered",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "vite",
+    "dev:api": "node scripts/dev-api.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.mjs",
+    "demo-data": "node scripts/generate-demo-data.mjs",
+    "ai:check": "node scripts/ai-check.mjs"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "idb": "8.0.0",
+    "papaparse": "5.4.1",
+    "pdfjs-dist": "6.4.299",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "pdfkit": "0.20.2",
+    "vite": "5.4.11"
+  }
+}

@@ -1,0 +1,39 @@
+/* Demo / test console styling only. The real UI comes later. */
+:root { --bg:#f6f5f2; --card:#fff; --ink:#1d2433; --muted:#6b7280; --line:#e5e3dd; --accent:#1f5f8b; --good:#1d7a4f; --warn:#b26b00; --bad:#b42318; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+h1 { font-size:18px; margin:0; } h2 { font-size:16px; margin:0 0 10px; } h3 { font-size:14px; margin:14px 0 6px; }
+.wrap { max-width:1180px; margin:0 auto; padding:16px; }
+.top { display:flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:space-between; margin-bottom:12px; }
+.tabs { display:flex; gap:4px; flex-wrap:wrap; margin-bottom:12px; }
+.tabs button { background:transparent; color:var(--ink); border:1px solid var(--line); }
+.tabs button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+.card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px; margin-bottom:12px; }
+.grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+.row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+button { font:inherit; padding:6px 10px; border-radius:6px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+button.ghost { background:#fff; color:var(--accent); }
+button.danger { background:var(--bad); border-color:var(--bad); }
+button:disabled { opacity:.5; cursor:not-allowed; }
+input, select, textarea { font:inherit; padding:6px 8px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); }
+textarea { width:100%; min-height:120px; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; font-size:12px; }
+.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.muted { color:var(--muted); } .small { font-size:12px; }
+.good { color:var(--good); } .bad { color:var(--bad); } .warn { color:var(--warn); }
+.badge { display:inline-block; padding:1px 6px; border-radius:10px; font-size:11px; border:1px solid var(--line); background:#faf9f6; margin-right:3px; white-space:nowrap; }
+.badge.rule,.badge.user { border-color:var(--accent); color:var(--accent); }
+.badge.ai { border-color:#7a3db8; color:#7a3db8; }
+.badge.heuristic,.badge.none { border-color:var(--warn); color:var(--warn); }
+.sev-critical { border-left:4px solid var(--bad); } .sev-warning { border-left:4px solid var(--warn); } .sev-info { border-left:4px solid var(--accent); }
+.stat { font-size:22px; font-weight:600; font-variant-numeric:tabular-nums; }
+.toast { position:fixed; bottom:16px; left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 14px; border-radius:8px; max-width:90vw; z-index:10; }
+pre { background:#f3f2ee; padding:8px; border-radius:6px; overflow:auto; font-size:12px; max-height:300px; }
+.lock { max-width:420px; margin:10vh auto; }
+.chat { max-height:420px; overflow:auto; }
+.msg { padding:8px 10px; border-radius:8px; margin:6px 0; white-space:pre-wrap; }
+.msg.user { background:#e8eef4; margin-left:15%; } .msg.assistant { background:#f3f2ee; margin-right:15%; }
+.feed li { margin:4px 0; }
+@media (max-width:700px){ .hide-sm { display:none; } }
